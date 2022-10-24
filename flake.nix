@@ -4,7 +4,7 @@
   description = "Flake to manage python workspace";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -27,6 +27,9 @@
               entr
               fd
               poetry
+              # Poetry's export is now its own plugin.
+              # Poetry plugins must be installed via nix, since poetry does not have write permission to the nix store
+              python310Packages.poetry-plugin-export
             ];
         });
         packages =

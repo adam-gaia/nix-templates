@@ -59,14 +59,14 @@ format: format_python format_nix
 format_check: format_check_python format_check_nix
 
 format_python: requires_nix_shell
-	black -l 80 ./
+	black ./
 
 format_check_python: requires_nix_shell
 	@echo "########################################"
 	@echo "##          Running black             ##"
 	@echo "########################################"
 	@echo ""
-	@black -l 80 --check ./
+	@black --check ./
 	@echo ""
 
 format_nix: requires_nix_shell
@@ -101,3 +101,4 @@ typecheck:
 	@echo ""
 	@mypy --strict ./
 	@echo ""
+
