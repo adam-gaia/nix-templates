@@ -5,7 +5,13 @@
 - Add this repo to list of registries under the alias 'templates'
 
 ```bash
-nix registry add templates .
+nix registry add templates "${PWD}" # Path must be absolute
+```
+
+- List avaliable registries
+
+```bash
+nix registry list
 ```
 
 - List templates
@@ -22,4 +28,7 @@ nix flake init -t templates#<template>
 
 ## Resources
 
-- https://peppe.rs/posts/novice_nix:_flake_templates/
+- Nix template notes
+  https://peppe.rs/posts/novice_nix:_flake_templates/
+- Python flake example
+  flake-utils.lib.eachDefaultSystem (system:
