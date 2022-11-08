@@ -1,7 +1,5 @@
-# Author: Peter Dragos
-# Repository: https://github.com/dragospe/python-flake-template
 {
-  description = "Flake to manage python workspace";
+  description = "TODO";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -29,7 +27,7 @@
               poetry
               # Poetry's export is now its own plugin.
               # Poetry plugins must be installed via nix, since poetry does not have write permission to the nix store
-              python310Packages.poetry-plugin-export
+              python310Packages.poetry-plugin-export # TODO: how do we base off of python version instead of hardcoded in package name?
             ];
         });
         packages =
