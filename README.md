@@ -31,4 +31,4 @@ nix flake init -t templates#<template>
 - Nix template notes
   https://peppe.rs/posts/novice_nix:_flake_templates/
 - Python flake example
-  flake-utils.lib.eachDefaultSystem (system:
+  https://github.com/dragospe/python-flake-template
