@@ -1,4 +1,3 @@
-
 {
   description = "TODO";
 
@@ -122,16 +121,16 @@
 
         checks = {
           inherit
-           # Build the crate as part of `nix flake check` for convenience
-           myCrate
-           myCrateFormat
-           myCrateClippy
-           #myCrateAudit
-           myCrateDoc;
-        #} // lib.optionalAttrs (system == "x86_64-linux") {
-        #    myCrateCoverage = craneLib.cargoTarpaulin {
-        #      inherit cargoArtifacts;
-        #    };
+            # Build the crate as part of `nix flake check` for convenience
+            myCrate
+            myCrateFormat
+            myCrateClippy
+            #myCrateAudit
+            myCrateDoc;
+          #} // lib.optionalAttrs (system == "x86_64-linux") {
+          #    myCrateCoverage = craneLib.cargoTarpaulin {
+          #      inherit cargoArtifacts;
+          #    };
         };
 
         apps.default = flake-utils.lib.mkApp {
